@@ -1,7 +1,7 @@
 class Bag {
     constructor(weight) {
-        if(!weight){
-            throw new Error('bag needs weight')
+        if(!weight||weight<0){
+            throw new Error('bag must have weight')
         } 
         this.weight = weight
     }

@@ -1,16 +1,29 @@
+const Person = require('./Person');
+
 class Plane {
-    constructor(name){
+	constructor(name) {
+		this.name = name;
+		this.passengers = [];
+	}
 
-    }
+	setOrigin(origin) {
+		this.origin = origin;
+	}
 
-    setOrigin(origin) {
-    }
+	setDestination(destination) {
+		this.destination = destination;
+	}
 
-    setDestination(destination) {
-    }
-
-    addPassenger(passenger) {
-    }
+	addPassenger(passenger) {
+		this.passengers.push(passenger);
+		return this.passengers;
+	}
 }
 
-module.exports = Plane
+const plane = new Plane('Blue jet', 'tokoyo', 'cappa1');
+plane.addPassenger('nick');
+plane.addPassenger('cool');
+
+console.log(plane);
+
+module.exports = Plane;

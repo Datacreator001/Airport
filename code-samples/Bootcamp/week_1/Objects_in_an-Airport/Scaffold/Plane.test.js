@@ -18,6 +18,7 @@ describe('Plane class', () => {
     })
 
     test('Plane can add passengers', () => {
+         
         newPlane.addPassenger(passenger)
         expect(newPlane.passengers.length).toBe(1)
     })

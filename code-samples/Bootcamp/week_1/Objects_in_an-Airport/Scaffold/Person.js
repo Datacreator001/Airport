@@ -1,10 +1,14 @@
 class Person {
-    constructor(name, bags) {
+    constructor(name, bags, passportNumber,seatNumber) {
         this.name = name
         this.bags = []
+        this.passportNumber= passportNumber
+        this.seatNumber= seatNumber
     }
 
-    //include an addBag method
+    addBag(bag){
+this.bags.push(bag)
+    }
 }
 
 module.exports = Person
